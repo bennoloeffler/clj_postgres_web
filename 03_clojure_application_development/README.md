@@ -1,0 +1,3 @@
+[Artikel](https://medium.com/@daniel.oliver.king/getting-real-work-done-in-clojure-application-development-683c8129a313)
+BEL installed postgres on linux (vux)
+pw: p_...

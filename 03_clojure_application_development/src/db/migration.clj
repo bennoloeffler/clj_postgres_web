@@ -4,7 +4,7 @@
             [clojure.java.jdbc :as jdbc]
             [ragtime.jdbc]
             [ragtime.repl :as ragtime]
-            [db.core :refer [connection]]
+            [db.core :refer [connection test-con]]
             [clj-time.core :as time]
             [clj-time.coerce :as time-coerce]))
 
@@ -58,3 +58,6 @@
   (let [num-migrations (get-migration-count)]
     (dotimes [_ num-migrations]
       (rollback!))))
+
+(defn test-connect []
+  (jdbc/query db.core/test-con ["SELECT 3*5 AS result"] ))
